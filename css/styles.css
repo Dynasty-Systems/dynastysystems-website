@@ -96,22 +96,88 @@ nav a {
 }
 
 .hero {
-    display: flex;
-    margin: 0, auto;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    padding: 100px 100px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 150px 100px;
 }
 
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hero-tex-gold {
+  color: var(--gold-accent);
 }
 
 .hero-top-text {
-    font-weight: 900;
-    font-size: 100px;
-    line-height: 1;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 1;
+}
+
+.hero-sub-text {
+  color: var(--teal-accent);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.hero-bottom-text {
+  margin-top: 20px;
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+.action-group {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.btn-primary {
+  background-color: var(--gold-accent);
+  color: var(--navy-card);
+  padding: 16px 32px;
+  text-decoration: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--text-light);
+  transition: all 0.3s ease;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  color: var(--text-light);
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--teal-accent);
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  color: var(--teal-accent);
 }
