@@ -181,3 +181,508 @@ nav a {
 .btn-secondary:hover {
   color: var(--teal-accent);
 }
+
+/* =========================================
+   SERVICES SECTION
+   ========================================= */
+
+.services {
+  /* Matches the spacious feel of your hero section */
+  padding: 100px 50px;
+  background-color: var(--navy-bg);
+}
+
+.services .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Section Header --- */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+/* The [ CAPABILITIES ] tag */
+.terminal-label {
+  color: var(--teal-accent);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.terminal-label::before {
+  content: "[  ";
+}
+
+.terminal-label::after {
+  content: "  ]";
+}
+
+.section-header h2 {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+/* --- Services Grid System --- */
+.services-grid {
+  display: grid;
+  /* Automatically creates 1 to 4 columns depending on screen size */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* --- Individual Service Cards --- */
+.service-card {
+  background-color: var(--navy-card);
+  padding: 40px 30px;
+  border-top: 3px solid var(--gold-accent);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  /* Uses your shadow color but slightly darker for depth */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.icon-placeholder {
+  color: var(--teal-accent);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 25px;
+  /* This pushes the list to the bottom, ensuring all cards stay the same height */
+  flex-grow: 1;
+}
+
+/* --- Technical Bullet Points --- */
+.service-details {
+  list-style: none;
+  border-top: 1px solid rgba(148, 163, 184, 0.1); /* Faded version of your --text-muted */
+  padding-top: 20px;
+}
+
+.service-details li {
+  color: var(--text-light);
+  font-size: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* The > arrow using your teal accent */
+.service-details li::before {
+  content: ">";
+  color: var(--teal-accent);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+/* =========================================
+   TECH STACK SECTION
+   ========================================= */
+
+.tech-stack {
+  padding: 100px 50px;
+  background-color: var(
+    --navy-card
+  ); /* Slightly different background to separate it from Services */
+}
+
+.tech-stack .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.stack-card {
+  background-color: var(--navy-bg);
+  padding: 30px;
+  border-radius: 4px;
+  border-left: 2px solid var(--teal-accent); /* Subtle technical border */
+}
+
+.stack-card h3 {
+  color: var(--text-light);
+  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* The Tech Pills Layout */
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  background-color: rgba(0, 128, 128, 0.1); /* Transparent teal background */
+  color: var(--teal-accent);
+  border: 1px solid var(--teal-accent);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.pill:hover {
+  background-color: var(--teal-accent);
+  color: var(--navy-bg);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   COMPANY SECTION
+   ========================================= */
+
+.company {
+  padding: 100px 50px;
+  background-color: var(--navy-bg);
+  /* Adds a subtle line at the top to separate it from the previous section */
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.company-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  gap: 60px;
+  align-items: center; /* Vertically centers the text with the cards */
+}
+
+/* --- Left Side Content --- */
+.company-content h2 {
+  font-size: 40px;
+  font-weight: 900;
+  color: var(--text-light);
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.company-content p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.company-content .btn-primary {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* --- Right Side Stat Cards --- */
+.company-stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: var(--navy-card);
+  padding: 30px;
+  border-left: 3px solid var(--gold-accent);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateX(-5px); /* Slides the card slightly left on hover */
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--text-light);
+  font-family: var(--font-main);
+  line-height: 1;
+  min-width: 90px; /* Keeps the text aligned even if numbers change */
+}
+
+.teal-text {
+  color: var(--teal-accent);
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+
+.site-footer {
+  background-color: var(--navy-card);
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  padding-top: 80px;
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 60px;
+  align-items: start; /* Ensures all columns align perfectly at the top */
+}
+
+/* --- Brand Column & Logo Fix --- */
+.logo-link {
+  text-decoration: none !important; /* Forces the blue underline to disappear */
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+  opacity: 0.8;
+}
+
+.footer-brand .logo-section {
+  gap: 15px;
+}
+
+.footer-brand .logo-section img {
+  width: 45px;
+  height: auto;
+}
+
+/* Ensure the text colors don't get overwritten by the link */
+.logo-link .text-white {
+  color: var(--text-light) !important;
+}
+
+.logo-link .text-dim {
+  color: var(--text-muted) !important;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  font-size: 15px;
+  max-width: 350px;
+  line-height: 1.8;
+}
+
+/* --- Links & Contact Columns --- */
+.footer-links .terminal-label,
+.footer-contact .terminal-label {
+  margin-bottom: 25px; /* Adds the exact spacing seen in your layout */
+}
+
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+}
+
+.footer-links li,
+.footer-contact li {
+  margin-bottom: 18px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--text-light);
+}
+
+/* --- Terminal Letter Accents (E:, P:, L:) --- */
+.footer-contact .teal-text {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  color: var(--teal-accent);
+  margin-right: 12px;
+}
+
+/* --- Bottom Copyright Bar --- */
+.footer-bottom {
+  background-color: var(--navy-bg);
+  padding: 25px 0;
+  text-align: center;
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.footer-bottom p {
+  color: var(--text-muted);
+  font-size: 13px;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.05em;
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (NEW)
+   ========================================= */
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 992px) {
+  /* On tablets and smaller, stack the two columns on top of each other */
+  .company-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Tablets and smaller screens (under 768px wide) */
+@media (max-width: 768px) {
+  /* Stacks the navbar items cleanly */
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  /* Fixes the massive padding and font sizes in the Hero */
+  .hero {
+    padding: 60px 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hero-top-text {
+    font-size: 50px; /* Scales down the 100px text so it fits */
+  }
+
+  /* Reduces padding on the services section */
+  .services {
+    padding: 60px 20px;
+  }
+
+  .section-header h2 {
+    font-size: 32px;
+  }
+
+  .hero svg {
+    display: none; /* Completely removes the SVG from the layout */
+    visibility: hidden; /* Hides the SVG on very small screens */
+  }
+
+  .tech-stack {
+    padding: 60px 20px;
+  }
+
+  .company {
+    padding: 60px 20px;
+  }
+
+  .company-content h2 {
+    font-size: 32px;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .stat-number {
+    font-size: 36px;
+    min-width: 70px;
+  }
+
+  .site-footer {
+    padding-top: 60px;
+  }
+
+  .site-footer .container {
+    padding: 0 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}
+
+/* Mobile phones (under 480px wide) */
+@media (max-width: 480px) {
+  .hero-top-text {
+    font-size: 40px;
+  }
+
+  .hero svg {
+    display: none; /* Completely removes the SVG from the layout */
+    visibility: hidden; /* Hides the SVG on very small screens */
+  }
+
+  /* Stacks the action buttons so they are easy to tap with a thumb */
+  .action-group {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  /* Makes the primary button span the full width of the screen */
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
