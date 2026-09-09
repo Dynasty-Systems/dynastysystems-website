@@ -309,65 +309,156 @@ nav a {
 }
 
 /* =========================================
-   TECH STACK SECTION
+   CASE STUDIES & TESTIMONIALS SECTION
    ========================================= */
 
-.tech-stack {
-  padding: 100px 50px;
-  background-color: var(
-    --navy-card
-  ); /* Slightly different background to separate it from Services */
+.case-studies-section {
+    padding: 100px 50px;
+    background-color: var(--navy-card); /* Keeps separation from the Services background */
 }
 
-.tech-stack .container {
-  max-width: 1200px;
-  margin: 0 auto;
+.case-studies-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.stack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+/* --- Case Studies Grid --- */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-bottom: 80px;
 }
 
-.stack-card {
-  background-color: var(--navy-bg);
-  padding: 30px;
-  border-radius: 4px;
-  border-left: 2px solid var(--teal-accent); /* Subtle technical border */
+.work-card {
+    background-color: var(--navy-bg);
+    border: 1px solid rgba(148, 163, 184, 0.1);
+    border-top: 3px solid var(--teal-accent);
+    padding: 40px 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.stack-card h3 {
-  color: var(--text-light);
-  font-size: 18px;
-  font-family: "Courier New", Courier, monospace;
-  margin-bottom: 20px;
-  text-transform: uppercase;
+.work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    border-color: rgba(0, 128, 128, 0.3); /* Subtle teal glow on hover */
 }
 
-/* The Tech Pills Layout */
-.tech-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.work-category {
+    color: var(--gold-accent);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 15px;
 }
 
-.pill {
-  background-color: rgba(0, 128, 128, 0.1); /* Transparent teal background */
-  color: var(--teal-accent);
-  border: 1px solid var(--teal-accent);
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  cursor: default;
+.work-content h3 {
+    color: var(--text-light);
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    line-height: 1.3;
 }
 
-.pill:hover {
-  background-color: var(--teal-accent);
-  color: var(--navy-bg);
-  transform: translateY(-2px);
+.work-content p {
+    color: var(--text-muted);
+    font-size: 15px;
+    margin-bottom: 30px;
+    flex-grow: 1; /* Pushes the button to the bottom evenly across all cards */
+}
+
+.work-content .btn-secondary {
+    align-self: flex-start;
+    font-size: 13px;
+}
+
+/* --- Testimonials Sub-Section --- */
+.testimonials-wrapper {
+    border-top: 1px solid rgba(148, 163, 184, 0.1);
+    padding-top: 60px;
+}
+
+.testimonials-title {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.testimonial-card {
+    background-color: var(--navy-bg);
+    padding: 35px;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* Decorative Quote Mark */
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 80px;
+    color: rgba(0, 128, 128, 0.1); /* Very faint teal */
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.quote {
+    color: var(--text-light);
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 2;
+}
+
+.client-info {
+    border-left: 2px solid var(--gold-accent);
+    padding-left: 15px;
+}
+
+.client-name {
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.client-company {
+    color: var(--teal-accent);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 3px;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .case-studies-section {
+        padding: 60px 20px;
+    }
+    
+    .work-grid,
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .work-card {
+        padding: 30px 20px;
+    }
 }
 
 /* =========================================
@@ -564,6 +655,45 @@ nav a {
   font-size: 13px;
   font-family: "Courier New", Courier, monospace;
   letter-spacing: 0.05em;
+}
+
+/* --- Footer Bottom & Socials --- */
+.footer-bottom-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links a {
+  color: var(--teal-accent);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--gold-accent);
+  transform: translateY(-2px); /* Slight upward bump on hover */
+}
+
+/* --- Mobile Responsiveness for Socials --- */
+@media (max-width: 768px) {
+  .footer-bottom-flex {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
 }
 
 /* =========================================
